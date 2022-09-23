@@ -7,13 +7,17 @@ document.addEventListener('mousemove', (e) => {
   const anchorX = rekt.left + rekt.width / 2;
   const anchorY = rekt.top + rekt.height / 2;
 
+  //was is suppposed to rotate?
+  //need to /**learn more**/
   const angleDeg = angle(mouseX, mouseY, anchorX, anchorY);
   console.log(angleDeg);
-  const balls = document.querySelectorAll('.eye');
-  balls.forEach((ball) => {
-    ball.style.transform = `rotate(${90 + angleDeg}deg)`;
-    // anchor.style.filter = ``
-  });
+  const ball = document.getElementById('ball');
+  // balls.forEach((ball) => {
+  //   ball.style.transform = `rotate(${90 + angleDeg}deg)`;
+  //   // anchor.style.filter = ``
+  // });
+
+  ball.style.transform = `rotate(${90 + angleDeg}deg)`;
 });
 
 function angle(cx, cy, ex, ey) {
